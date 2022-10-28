@@ -1,0 +1,329 @@
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Roboto';
+   font-size: 20px;
+   color: rgb(0, 0, 0);
+   
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.head {
+   display: flex;
+   align-items: center;
+   margin: 20px 0 0;
+}
+
+.head a {
+   margin: 0 0.5px;
+   font-size: 20px;
+   color: #ff0000;
+}
+
+h1 {font-weight: 600;}
+
+h1 span {
+   background-color: #ff0000;
+}
+
+.numero {
+   font-size: 16px;
+   font-weight: 600px;
+}
+
+.Simbolos {
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.elementos {
+   font-size: 11px;
+   font-weight: 900;
+}
+
+.grupo {
+   font-size: 10px;
+   font-weight: 600;
+}
+
+.container {
+   display: grid;
+   grid-template-columns: repeat(18, 70px);
+   grid-auto-rows: minmax(10px, auto);
+   grid-gap: 5px;
+   padding: 10px 20px;
+
+}
+
+.box {
+
+   border-radius: 3px; 
+}
+
+.box:hover {
+   background:rgba(68, 68, 68, 0.075);
+}
+
+/* Metal Alcalino e Metaloide */
+.alkali-metal,
+.metalloid {
+   background: #F1B200;
+}
+
+/* Terra alcalina, nao metalicos e actinideos*/
+.alkaline-earth,
+.non-metals,
+.actinides  {
+   background: #EADA00;
+}
+
+/* Metais de transiçao */
+.transition-metals {
+   background: #E77878;
+}
+
+/* Pos-transicao */
+.post-transition-metals {
+   background: #A2C7D3;
+}
+
+/* Halogenio */
+.halogen {
+   background: #44A69C;
+}
+
+/* Gas Nobre e Lantanideos */
+.noble-gas,
+.lanthanides {
+   background: #3D9EE3;
+   border-color: #70CBEB;
+   
+}
+.container2{
+
+min-width:800px;
+min-height:800px ;
+background-color: rgb(238, 238, 238);
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-left: 27%;
+margin-right: 15%;
+margin-top: 10px;
+border-radius: 10px;
+border: 2px solid #F1B200;
+}
+
+.descricao{
+
+   text-align: center;
+   justify-content: center;
+   border-radius: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+}
+
+.box {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+   padding: 5px;
+}
+
+/* Extensoes e posicoes da grade */
+.box:first-child {
+   grid-column: 1;
+}
+
+.box:nth-child(2) {
+   grid-column: 18;
+}
+
+.box:nth-child(5) {
+   grid-column: 13;
+}
+
+.box:nth-child(12) {
+   grid-column: 2;
+}
+
+.box:nth-child(13) {
+   grid-column: 13;
+}
+
+/* Responsivo */
+@media(max-width: 1350px) {
+   .container {
+      grid-template-columns: repeat(20px, 60px);
+   }
+
+   .box {
+      overflow-x: hidden;
+   }
+}
+
+@media(max-width: 1230px) {
+   .box:nth-child(2) {
+      grid-column: 2;
+   }
+}
+
+@media(max-width: 1150px) {
+   .container {
+      grid-template-columns: repeat(10, 70px);
+   }
+
+   .box:nth-child(5) {
+      grid-column: 5;
+   }
+
+   .box:nth-child(10) {
+      grid-column: 10;
+   }
+
+   .box:nth-child(11) {
+      grid-row: 2;
+      grid-column: 1;
+   }
+
+   .box:nth-child(13) {
+      grid-row: 2;
+      grid-column: 3;
+   }
+}
+
+@media(max-width: 800px) {
+   .container {
+      grid-template-columns: repeat(5, 70px);
+   }
+
+   .box:nth-child(5) {
+      grid-row: 1;
+   }
+
+   .box:nth-child(10) {
+      grid-column: 5;
+      grid-row: 2;
+   }
+
+   .box:nth-child(11) {
+      grid-row: 3;
+      grid-column: 1;
+   }
+
+   .box:nth-child(13) {
+      grid-row: 3;
+      grid-column: 3;
+   }
+
+}
+:root{
+
+	--alcalino-metaloide:#F1B200;
+	--nao-metal:#EADA00;
+	--gas-nobre:#E77878;
+	--metal-alcalino:#A2C7D3;
+	--metal-alcalino-terroso:#44A69C;
+	--gas-nobre-lantanideo:#3D9EE3;
+}
+
+
+.alcalino-metaloide{
+	color:var(--alcalino-metaloide);
+}
+	
+.gas-nobre{
+	color:var(--gas-nobre);
+}
+
+.metal-alcalino{
+	color:var(--metal-alcalino);
+}
+	
+.metal-alcalino-terroso{
+	color:var(--metal-alcalino-terroso);
+}
+	
+.gas-nobre-lantanideo{
+	color:var(--gas-nobre-lantanideo);
+}
+
+.descricao2{
+	font-size:.8em;
+	text-align:left;	
+	flex-basis:13.5rem;
+	margin:-.25em 0 0 1em;
+}
+
+ul{
+   
+	display:flex;
+	flex-wrap:wrap;
+  top:20px;
+}
+
+li{
+	flex-basis:100%;
+	line-height:105px;
+}
+
+li:before{
+	content:' ';
+	display:inline-block;
+	width:20px;
+	height:20px;
+	border:.400px solid;
+	border-radius:.20px;	
+	margin-right:.5em;
+	position:relative;
+	top:.90px;
+}
+.descricao2{
+   font-size:20px;
+   width:100%;
+   margin:20px 0;
+}
+
+ul{
+   justify-content:center;
+}
+
+li{
+   flex-basis:auto;
+   margin-bottom:0;	
+}
+
+li + li{
+   margin-left:40px;	
+}	
+
+a.btn-topo {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   background-color: rgb(238, 238, 238);
+   margin-right: 50px;
+   border-radius: 10px;
+   border: 2px solid #F1B200;
+   padding: 20px 40px 20px 40px;
+   margin-bottom: 20px;
+   color: #000000;
+
+}
+   
